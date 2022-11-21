@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="dau-vao" >
+  <select name="" id="select-1">
+    <option value="VNĐ">VNĐ</option>
+    <option value="USĐ">USD</option>
+  </select>
+  <select name="" id="select-2">
+    <option value="VNĐ">VNĐ</option>
+    <option value="USĐ">USD</option>
+  </select>
+  <button onclick="chuyendoitiente()">Convert</button>
+  <script>
+   function chuyendoitiente(){
+    let giatridauvao = document.getElementById("dau-vao").value;
+    let select1 = document.getElementById("select-1").value;
+    let select2 = document.getElementById("select-2").value;
+    let giatridauvao1 = parseInt(giatridauvao);
+    let giatridauvao2 = parseFloat(giatridauvao);
+    if(select1 == "VNĐ" && select2 == "USĐ"){
+      let ketqua = giatridauvao1/23000;
+      alert("Kết quả là: " + ketqua+ " USD");
+    }
+    else if(select1 == "USĐ" && select2 == "VNĐ"){
+      let ketqua = giatridauvao2*23000;
+      alert("Kết quả là: " + ketqua+ " VNĐ");
+    }
+    else{
+      alert("Vui lòng chọn đơn vị tiền tệ khác nhau");
+    }
+   }
+    
+  </script>
+  
+  
+   
+</body>
+</html>

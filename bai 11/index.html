@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- tinh nam am lich -->
+   <form action="" >
+         <input type="text" name="namduonglich" id="namduonglich" placeholder="Nhập năm dương lịch">
+         <button type="submit" onclick="namamlich()">Tính năm âm lịch</button>
+   </form>
+   <script>
+    function namamlich(){
+        let nam_duong_lich = document.getElementById("namduonglich").value;
+        let Can = ["Canh","Tân","Nhâm","Quý","Giáp","Ất","Bính","Đinh","Mậu","Kỷ"];
+        let Chi = ["Thân","Dậu","Tuất ","Hợi","Tý","Sửu","Dần","Mẹo","Thìn","Tỵ","Ngọ","Mùi"];
+        let can = Can[(nam_duong_lich)%10];
+        let chi = Chi[(nam_duong_lich)%12];
+        let nam_am_lich = can + " " + chi;
+        alert(nam_am_lich);
+
+       
+    }
+    </script>
+
+</body>
+</html>
