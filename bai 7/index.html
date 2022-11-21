@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Môn Toán</label>
+    <input type="text" name="" id="mon-toan">
+    <label for="name">Môn Văn</label>
+    <input type="text" name="name" id="mon-van">
+    <label for="name">Môn Anh</label>
+    <input type="text" name="name" id="mon-anh">
+    <label for="name">Khu vực</label>
+    <select name="area" id="area">
+        <option value="1">KV1</option>
+        <option value="2">KV2</option>
+        <option value="3">KV2-NT</option>
+        <option value="4">KV3</option>
+    </select>
+    <button class="btn-tinhdiem">Tính điểm</button>
+    <script>
+        var btnTinhDiem = document.querySelector('.btn-tinhdiem');
+        btnTinhDiem.onclick = function() {
+            var monToan = document.querySelector('#mon-toan').value;
+            var monVan = document.querySelector('#mon-van').value;
+            var monAnh = document.querySelector('#mon-anh').value;
+            var area = document.querySelector('#area').value;
+            var tongDiem = parseInt(monToan) + parseInt(monVan) + parseInt(monAnh)+ parseInt(area);
+            var diemchuan = 19.75;
+             
+            if(tongDiem >= diemchuan) {
+                alert('Đậu');
+            } else {
+                alert('Rớt');
+            }
+        }
+    </script>
+   
+</body>
+</html>
