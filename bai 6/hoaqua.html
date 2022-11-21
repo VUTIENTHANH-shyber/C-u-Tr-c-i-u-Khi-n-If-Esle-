@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" name="tenhoaqua" id="tenhoaqua">
+    <button type="submit" onclick="tinhgia()">Tính giá</button>
+    <script >
+        function tinhgia(){
+            var tenhoaqua = document.getElementById("tenhoaqua").value;
+            var gia = 0;
+            switch(tenhoaqua){
+                case "cam":
+                    gia = 10000;
+                    break;
+                case "tao":
+                    gia = 20000;
+                    break;
+                case "xoai":
+                    gia = 30000;
+                    break;
+                case "dua":
+                    gia = 40000;
+                    break;
+                case "le":
+                    gia = 50000;
+                    break;
+                default:
+                    gia = 0;
+                    break;
+            }
+            alert("Giá của " + tenhoaqua + " là " + gia);
+        }
+    </script>
+</body>
+</html>
